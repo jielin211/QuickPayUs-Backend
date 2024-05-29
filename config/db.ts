@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-const connectDB = async () => {
+const connectDB = async (): Promise<void> => {
   try {
     await mongoose.connect(
       process.env.MONGO_URI || "mongodb://127.0.0.1:27017/quickpayus"
@@ -8,9 +8,13 @@ const connectDB = async () => {
 
     console.log("MongoDB Connected...");
   } catch (error) {
-    console.error("MongoDB connection error:", error.message);
+    if (error instanceof Error) {
+      console.error("MongoDB connection error:", error.message);
+    } else {
+      console.error("An unknown error occurred during MongoDB connection");
+    }
     process.exit(1); // Exit with failure
   }
 };
 
-module.exports = connectDB;
+export default connectDB;

@@ -13,6 +13,10 @@
   "author": "Quickpayus Team",
   "license": "ISC",
   "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/ejs": "^3.1.5",
+    "@types/mongoose": "^5.11.97",
+    "@types/nodemailer": "^6.4.15",
     "axios": "^1.6.3",
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
@@ -30,13 +34,20 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "node-cron": "^3.0.3",
+    "node-fetch": "^3.3.2",
     "nodemailer": "^6.9.7",
     "random-number-csprng": "^1.0.2"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
+    "@types/bcrypt": "^5.0.2",
+    "@types/cookie-parser": "^1.4.7",
+    "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/morgan": "^1.9.9",
     "@types/node": "^20.12.12",
+    "@types/node-fetch": "^2.6.11",
     "typescript": "^5.4.5"
   }
 }
